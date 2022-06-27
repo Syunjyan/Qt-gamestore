@@ -1,11 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "client.h"
 
-MainWindow::MainWindow(QWidget *parent)
+MainWindow::MainWindow(Client *clnt ,QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    client=clnt;
 }
 
 MainWindow::~MainWindow()

@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "client.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -12,7 +13,7 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    MainWindow(QWidget *parent = nullptr);
+    MainWindow(Client *clnt = nullptr, QWidget *parent = nullptr);
     ~MainWindow();
 
 private slots:
@@ -26,5 +27,6 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    Client *client;
 };
 #endif // MAINWINDOW_H

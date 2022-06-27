@@ -34,6 +34,15 @@
           <height>16</height>
          </size>
         </property>
+        <property name="autoDefault">
+         <bool>false</bool>
+        </property>
+        <property name="default">
+         <bool>false</bool>
+        </property>
+        <property name="flat">
+         <bool>false</bool>
+        </property>
        </widget>
       </item>
       <item>
@@ -136,7 +145,7 @@
               <string/>
              </property>
              <property name="pixmap">
-              <pixmap resource="myicon.qrc">:/myimages/images/defaultUSER.png</pixmap>
+              <pixmap>:/myimages/images/defaultUSER.png</pixmap>
              </property>
              <property name="scaledContents">
               <bool>true</bool>
@@ -186,8 +195,6 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="myicon.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
