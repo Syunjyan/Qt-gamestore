@@ -1,13 +1,13 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "client.h"
+#include "usrsetting.h"
+#include "ui_usrsetting.h"
 
-MainWindow::MainWindow(Client *clnt ,QWidget *parent)
+MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    client=clnt;
 }
 
 MainWindow::~MainWindow()
@@ -38,4 +38,6 @@ void MainWindow::on_uploadBtn_clicked()
 {
     ui->DisplayWidget->setCurrentIndex(3);
 }
+
+
 
