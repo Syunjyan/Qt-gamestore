@@ -249,7 +249,21 @@ QPushButton#uploadBtn:disabled {
       </property>
       <widget class="QWidget" name="user">
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="1" column="0">
+        <item row="5" column="0">
+         <widget class="QTextEdit" name="showInformationTextEdit">
+          <property name="styleSheet">
+           <string notr="true">QTextEdit#showInformationTextEdit{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
          <widget class="QWidget" name="widget" native="true">
           <property name="maximumSize">
            <size>
@@ -298,29 +312,56 @@ QPushButton#uploadBtn:disabled {
           </layout>
          </widget>
         </item>
-        <item row="2" column="0">
+        <item row="3" column="2">
          <widget class="QWidget" name="widget_2" native="true">
-          <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>200</height>
+           </size>
+          </property>
+          <property name="sizeIncrement">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
            <item>
-            <widget class="QTextEdit" name="showInformationTextEdit">
-             <property name="styleSheet">
-              <string notr="true">QTextEdit#showInformationTextEdit{
-color: rgb(147, 147, 147);
-                            	padding-left:6px;
-
-    border: 1px solid rgb(20,196,188);
-border-radius: 8px;
-    background-color: #ffffff;
-};</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="pushButton_2">
+            <widget class="QPushButton" name="settingBtn">
              <property name="font">
               <font>
                <pointsize>1</pointsize>
               </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#settingBtn {
+    border-radius: 12px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#settingBtn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#settingBtn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#settingBtn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
              </property>
              <property name="text">
               <string/>
@@ -337,125 +378,225 @@ border-radius: 8px;
              </property>
             </widget>
            </item>
+           <item>
+            <spacer name="verticalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
           </layout>
          </widget>
         </item>
        </layout>
       </widget>
       <widget class="QWidget" name="store">
-       <widget class="QPushButton" name="zhenghuoBtn">
+       <widget class="QWidget" name="widget_3" native="true">
         <property name="geometry">
          <rect>
-          <x>240</x>
-          <y>50</y>
-          <width>412</width>
-          <height>108</height>
+          <x>10</x>
+          <y>10</y>
+          <width>661</width>
+          <height>126</height>
          </rect>
         </property>
-        <property name="minimumSize">
-         <size>
-          <width>300</width>
-          <height>50</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset resource="myicon.qrc">
-          <normaloff>:/myimages/images/happy.png</normaloff>:/myimages/images/happy.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>400</width>
-          <height>100</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="onSaleBtn">
-        <property name="geometry">
-         <rect>
-          <x>40</x>
-          <y>50</y>
-          <width>112</width>
-          <height>108</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="sizeIncrement">
-         <size>
-          <width>0</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset resource="myicon.qrc">
-          <normaloff>:/myimages/images/sale.png</normaloff>:/myimages/images/sale.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>100</width>
-          <height>100</height>
-         </size>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="onSaleBtn">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="sizeIncrement">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#onSaleBtn {
+    border-radius: 12px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#onSaleBtn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#onSaleBtn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#onSaleBtn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="myicon.qrc">
+             <normaloff>:/myimages/images/sale.png</normaloff>:/myimages/images/sale.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="zhenghuoBtn">
+           <property name="minimumSize">
+            <size>
+             <width>300</width>
+             <height>50</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#zhenghuoBtn {
+    border-radius: 12px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#zhenghuoBtn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#zhenghuoBtn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#zhenghuoBtn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="myicon.qrc">
+             <normaloff>:/myimages/images/happy.png</normaloff>:/myimages/images/happy.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>400</width>
+             <height>100</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="library">
-       <widget class="QPushButton" name="pushButton">
+       <widget class="QWidget" name="widget_4" native="true">
         <property name="geometry">
          <rect>
-          <x>30</x>
-          <y>10</y>
-          <width>100</width>
-          <height>100</height>
+          <x>10</x>
+          <y>0</y>
+          <width>411</width>
+          <height>130</height>
          </rect>
         </property>
-        <property name="minimumSize">
-         <size>
-          <width>100</width>
-          <height>100</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="icon">
-         <iconset resource="myicon.qrc">
-          <normaloff>:/myimages/images/controllor.png</normaloff>:/myimages/images/controllor.png</iconset>
-        </property>
-        <property name="iconSize">
-         <size>
-          <width>100</width>
-          <height>100</height>
-         </size>
-        </property>
-       </widget>
-       <widget class="QLabel" name="label_5">
-        <property name="geometry">
-         <rect>
-          <x>240</x>
-          <y>20</y>
-          <width>251</width>
-          <height>61</height>
-         </rect>
-        </property>
-        <property name="font">
-         <font>
-          <family>Mistral</family>
-          <pointsize>28</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>It's time to play!!!</string>
-        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QPushButton" name="playBtn">
+           <property name="minimumSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton#playBtn {
+    border-radius: 12px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#playBtn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#playBtn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#playBtn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="myicon.qrc">
+             <normaloff>:/myimages/images/controllor.png</normaloff>:/myimages/images/controllor.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>100</width>
+             <height>100</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="font">
+            <font>
+             <family>Mistral</family>
+             <pointsize>28</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>It's time to play!!!</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
       <widget class="QWidget" name="upload">
@@ -639,7 +780,7 @@ border-radius: 8px;
  (optional)</string>
           </property>
           <property name="textFormat">
-           <enum>Qt::MarkdownText</enum>
+           <enum>Qt::AutoText</enum>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>

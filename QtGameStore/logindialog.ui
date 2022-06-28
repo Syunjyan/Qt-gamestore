@@ -382,7 +382,7 @@ border-radius:8px;
        <enum>QLineEdit::Normal</enum>
       </property>
       <property name="placeholderText">
-       <string>Input your usrename</string>
+       <string>Input your username</string>
       </property>
       <property name="cursorMoveStyle">
        <enum>Qt::LogicalMoveStyle</enum>

@@ -41,3 +41,16 @@ void MainWindow::on_uploadBtn_clicked()
 
 
 
+
+void MainWindow::on_settingBtn_clicked()
+{
+usrSetting dlg;
+dlg.exec();
+}
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+
+}
+

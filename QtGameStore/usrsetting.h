@@ -1,13 +1,13 @@
 #ifndef USRSETTING_H
 #define USRSETTING_H
 
-#include <QWidget>
+#include <QDialog>
 
 namespace Ui {
 class usrSetting;
 }
 
-class usrSetting : public QWidget
+class usrSetting : public QDialog
 {
     Q_OBJECT
 
