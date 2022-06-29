@@ -15,6 +15,7 @@ MainWindow::MainWindow(Client *clnt ,QWidget *parent)
     ui->setupUi(this);
     client=clnt;
 
+    ui->DisplayWidget->setCurrentIndex(0);
     ui->playerName->setText(client->curUsr);
 
     QDir dir;
@@ -35,6 +36,14 @@ MainWindow::MainWindow(Client *clnt ,QWidget *parent)
         ui->playerIcon->setScaledContents(true);
 //        ui->playerIcon->resize(imageSize);
     }
+
+    QFile Info(userFilePath + "/Info.txt");
+    if(Info.open(QFile::ReadOnly | QFile::Text)){
+        QTextStream in(&Info);
+        ui->showInformationTextBrowser->setPlainText(in.readAll());
+    }
+
+    this->setWindowTitle("the Wizards");
 }
 
 MainWindow::~MainWindow()
@@ -82,5 +91,11 @@ void MainWindow::on_settingBtn_clicked()
         ui->playerIcon->setPixmap(pixmap);
         ui->playerIcon->setScaledContents(true);
     }
+    QFile Info(userFilePath + "/Info.txt");
+    if(Info.open(QFile::ReadOnly | QFile::Text)){
+        QTextStream in(&Info);
+        ui->showInformationTextBrowser->setPlainText(in.readAll());
+    }
+
 }
 

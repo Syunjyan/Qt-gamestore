@@ -35,7 +35,8 @@ void LoginDialog::on_loginBtn_clicked()
     QString password = ui->pwdLineEdit->text();
     if(username.isEmpty() || password.isEmpty())
     {
-        QMessageBox::warning(this,"警告","用户名或密码不能为空",QMessageBox::Yes);
+QMessageBox msg(QMessageBox::Warning,"警告","用户名或密码不能为空",QMessageBox::Yes,NULL);
+msg.exec();
         ui->usrLineEdit->clear();
         ui->pwdLineEdit->clear();
         ui->usrLineEdit->setFocus();
@@ -67,9 +68,10 @@ void LoginDialog::on_loginBtn_clicked()
     }
     else {
         disconnect(client, 0, &loop, 0);
-        QMessageBox::warning(this, tr(""),
+        QMessageBox msg(QMessageBox::Warning, tr(""),
                     tr("连接超时，请重试"),
                     QMessageBox::Yes);
+        msg.exec();
         return;
     }
 
@@ -81,18 +83,20 @@ void LoginDialog::on_loginBtn_clicked()
         accept();
     }
     else if(client->receiveType == client->LOGINIDNON){
-       QMessageBox::warning(this, tr("警告"),
+       QMessageBox msg(QMessageBox::Warning, tr("警告"),
                    tr("用户名不存在"),
                    QMessageBox::Yes);
+               msg.exec();
        // 清空内容并定位光标
        ui->usrLineEdit->clear();
        ui->pwdLineEdit->clear();
        ui->usrLineEdit->setFocus();
     }
     else if(client->receiveType == client->LOGINPASSERROR){
-       QMessageBox::warning(this, tr("警告"),
+       QMessageBox msg(QMessageBox::Warning, tr("警告"),
                    tr("密码错误！"),
                    QMessageBox::Yes);
+       msg.exec();
        // 清空内容并定位光标
        ui->usrLineEdit->clear();
        ui->pwdLineEdit->clear();

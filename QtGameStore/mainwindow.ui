@@ -17,9 +17,12 @@
    <string notr="true">background-color: rgb(255, 255, 255);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <layout class="QFormLayout" name="formLayout">
+   <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
       <item>
        <widget class="QPushButton" name="usrBtn">
         <property name="minimumSize">
@@ -249,20 +252,6 @@ QPushButton#uploadBtn:disabled {
       </property>
       <widget class="QWidget" name="user">
        <layout class="QGridLayout" name="gridLayout_3">
-        <item row="5" column="0">
-         <widget class="QTextEdit" name="showInformationTextEdit">
-          <property name="styleSheet">
-           <string notr="true">QTextEdit#showInformationTextEdit{
-color: rgb(147, 147, 147);
-                            	padding-left:6px;
-
-    border: 1px solid rgb(20,196,188);
-border-radius: 8px;
-    background-color: #ffffff;
-};</string>
-          </property>
-         </widget>
-        </item>
         <item row="3" column="0">
          <widget class="QWidget" name="widget" native="true">
           <property name="maximumSize">
@@ -392,6 +381,20 @@ QPushButton#settingBtn:disabled {
             </spacer>
            </item>
           </layout>
+         </widget>
+        </item>
+        <item row="5" column="0">
+         <widget class="QTextBrowser" name="showInformationTextBrowser">
+          <property name="styleSheet">
+           <string notr="true">QTextEdit#showInformationTextEdit{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+          </property>
          </widget>
         </item>
        </layout>

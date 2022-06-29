@@ -23,6 +23,8 @@ private slots:
 
     void on_uploadIconBtn_clicked();
 
+    void on_confirmChangeInfoBtn_clicked();
+
 private:
     Ui::usrSetting *ui;
     Client *client;

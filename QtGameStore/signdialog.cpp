@@ -15,6 +15,7 @@ SignDialog::SignDialog(Client *clnt, QWidget *parent) :
     setTabOrder(ui->usrLineEdit, ui->pwdLineEdit);
     client = clnt;
     ui->usrLineEdit->setFocus();
+    this->setWindowTitle("注册");
 }
 
 SignDialog::~SignDialog()

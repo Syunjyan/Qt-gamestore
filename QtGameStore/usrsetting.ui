@@ -70,48 +70,6 @@ QPushButton#chooseIconBtn:disabled {
      </property>
     </widget>
    </item>
-   <item row="3" column="0">
-    <widget class="QPushButton" name="changeInformationBtn">
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">QPushButton#changeInformationBtn {
-    border-radius: 6px;
-    border:2px solid rgb(20,196,188);
-background-color: rgb(20,196,188);
-    color:  rgb(255, 255, 255);
-}
- 
-QPushButton#changeInformationBtn:hover {
-    border-radius: 6px;
-    color: rgb(20,196,188);
-    background-color: rgb(255,255,255);
-  border:2px solid rgb(20,196,188);
-    border-color: rgb(20,196,188);
-}
- 
-QPushButton#changeInformation:pressed {
-    border: 0px;
-    background-color: #ffffff;
-    border-radius: 6px;
-}
- 
-QPushButton#changeInformation:disabled {
-    border: 0px;
-    border-radius: 6px;
-    border: 1px solid #46bcff;
-    opacity: 0.4;
-}</string>
-     </property>
-     <property name="text">
-      <string>Edit your
- information</string>
-     </property>
-    </widget>
-   </item>
    <item row="0" column="1">
     <spacer name="verticalSpacer">
      <property name="orientation">
@@ -142,30 +100,30 @@ QPushButton#changeInformation:disabled {
          </font>
         </property>
         <property name="styleSheet">
-         <string notr="true">QPushButton#changeInformationBtn {
-    border-radius: 6px;
+         <string notr="true">QPushButton#confirmChangeInfoBtn {
+    border-radius: 8px;
     border:2px solid rgb(20,196,188);
 background-color: rgb(20,196,188);
     color:  rgb(255, 255, 255);
 }
  
-QPushButton#changeInformationBtn:hover {
-    border-radius: 6px;
+QPushButton#confirmChangeInfoBtn:hover {
+    border-radius: 8px;
     color: rgb(20,196,188);
     background-color: rgb(255,255,255);
   border:2px solid rgb(20,196,188);
     border-color: rgb(20,196,188);
 }
  
-QPushButton#changeInformation:pressed {
+QPushButton#confirmChangeInfoBtn:pressed {
     border: 0px;
     background-color: #ffffff;
-    border-radius: 6px;
+    border-radius: 8px;
 }
  
-QPushButton#changeInformation:disabled {
+QPushButton#confirmChangeInfoBtn:disabled {
     border: 0px;
-    border-radius: 6px;
+    border-radius: 8px;
     border: 1px solid #46bcff;
     opacity: 0.4;
 }</string>
@@ -241,6 +199,35 @@ border-radius: 8px;
           <height>16777215</height>
          </size>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#uploadIconBtn {
+    border-radius: 8px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#uploadIconBtn:hover {
+    border-radius: 8px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#uploadIconBtn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+ 
+QPushButton#uploadIconBtn:disabled {
+    border: 0px;
+    border-radius: 8px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+        </property>
         <property name="text">
          <string>Uplaod</string>
         </property>
@@ -249,44 +236,38 @@ border-radius: 8px;
      </layout>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QPushButton" name="iconBtn">
-     <property name="font">
-      <font>
-       <pointsize>10</pointsize>
-      </font>
-     </property>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label">
      <property name="styleSheet">
-      <string notr="true">QPushButton#iconBtn {
-    border-radius: 6px;
-    border:2px solid rgb(20,196,188);
-background-color: rgb(20,196,188);
-    color:  rgb(255, 255, 255);
-}
- 
-QPushButton#iconBtn:hover {
-    border-radius: 6px;
-    color: rgb(20,196,188);
-    background-color: rgb(255,255,255);
-  border:2px solid rgb(20,196,188);
-    border-color: rgb(20,196,188);
-}
- 
-QPushButton#iconBtn:pressed {
-    border: 0px;
-    background-color: #ffffff;
-    border-radius: 6px;
-}
- 
-QPushButton#iconBtn:disabled {
-    border: 0px;
-    border-radius: 6px;
-    border: 1px solid #46bcff;
-    opacity: 0.4;
-}</string>
+      <string notr="true">QLabel#label{
+color: rgb(255, 255, 255);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: rgb(20,196,188);
+};</string>
      </property>
      <property name="text">
-      <string>Upload Icon</string>
+      <string>Edit your 
+information</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="styleSheet">
+      <string notr="true">QLabel#label_2{
+color: rgb(255, 255, 255);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: rgb(20,196,188);
+};</string>
+     </property>
+     <property name="text">
+      <string>Upload icon</string>
      </property>
     </widget>
    </item>
