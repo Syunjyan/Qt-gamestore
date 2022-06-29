@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/myimages">
+        <file>images/defaultUSER.png</file>
+        <file>images/Dribbble.png</file>
+        <file>images/library.png</file>
+        <file>images/store.png</file>
+        <file>images/upload.png</file>
+        <file>images/setting.png</file>
+        <file>images/user.png</file>
+        <file>images/sale.png</file>
+        <file>images/happy.png</file>
+        <file>images/controllor.png</file>
+    </qresource>
+</RCC>
