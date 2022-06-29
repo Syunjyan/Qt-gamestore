@@ -25,8 +25,11 @@ private slots:
 
     void on_uploadBtn_clicked();
 
+    void on_settingBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client *client;
+    QString userFilePath;
 };
 #endif // MAINWINDOW_H

@@ -9,32 +9,22 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+    QDir dir;
+    if(!dir.exists("files"))
+    {
+        dir.mkdir("files");
+    }
     Client clnt;
-    MainWindow w(&clnt);
+
     LoginDialog dlg(&clnt);
 
     dlg.setWindowTitle("登录");
 
     if(dlg.exec()==QDialog::Accepted)
     {
+        MainWindow w(&clnt);
         w.show();
         return a.exec();
     }
     return 0;
 }
-
-//int main(int argc, char *argv[])
-//{
-//    QApplication a(argc, argv);
-//    Client w;
-//    w.setWindowTitle("文件传输系统");
-//    QDir dir;
-//    if(!dir.exists("files"))
-//    {
-//        dir.mkdir("files");
-//    }
-
-//    w.show();
-
-//    return a.exec();
-//}

@@ -38,6 +38,7 @@ void LoginDialog::on_loginBtn_clicked()
         QMessageBox::warning(this,"警告","用户名或密码不能为空",QMessageBox::Yes);
         ui->usrLineEdit->clear();
         ui->pwdLineEdit->clear();
+        ui->usrLineEdit->setFocus();
         return;
     }
 
@@ -76,7 +77,8 @@ void LoginDialog::on_loginBtn_clicked()
     qDebug() <<"send out.";
     if(client->receiveType == client->LOGINSUCCESS)
     {
-       accept();
+        client->curUsr = username;
+        accept();
     }
     else if(client->receiveType == client->LOGINIDNON){
        QMessageBox::warning(this, tr("警告"),

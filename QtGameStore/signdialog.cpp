@@ -4,6 +4,7 @@
 
 #include <QString>
 #include <QMessageBox>
+#include <QTimer>
 
 SignDialog::SignDialog(Client *clnt, QWidget *parent) :
     QDialog(parent),
@@ -55,10 +56,36 @@ void SignDialog::on_loginBtn_clicked()
 
     client->sendMessToServer(client->REGIREQ, username, password);
 
+    //等待数据接收
+    QEventLoop loop;
+
+    connect(client, SIGNAL(endReading()), &loop, SLOT(quit()));
+
+    QTimer timer;
+    timer.setInterval(5000);
+    timer.setSingleShot(true);
+    timer.start();
+    QTimer::singleShot(5000, &loop, SLOT(quit()));
+    loop.exec();
+
+    /* 处理响应 */
+    if (timer.isActive()) {
+        // 执行处理
+
+    }
+    else {
+        disconnect(client, 0, &loop, 0);
+        QMessageBox::warning(this, tr(""),
+                    tr("连接超时，请重试"),
+                    QMessageBox::Yes);
+        return;
+    }
+
     qDebug()<<client->receiveType<<' '<<client->REGISUCCESS;
 
     if(client->receiveType == client->REGISUCCESS){
         QMessageBox::warning(this,"","注册成功",QMessageBox::Yes);
+        client->curUsr = username;
         accept();
     }
     else if(client->receiveType == client->REGIIDEXIT){
