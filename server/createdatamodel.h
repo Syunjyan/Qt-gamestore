@@ -19,7 +19,6 @@ static bool createDataModel()
     QSqlQuery query(db);
     //数据库预设信息
     query.exec("create table user (id varchar primary key, pass varchar)");
-    query.exec("insert into user values('李旭同', '2015211494')");
     query.exec("insert into user values('马云', '66666')");
     query.exec("insert into user values('马化腾', '23333')");
 
