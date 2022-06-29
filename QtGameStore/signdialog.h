@@ -2,6 +2,7 @@
 #define SIGNDIALOG_H
 
 #include <QDialog>
+#include "client.h"
 
 namespace Ui {
 class SignDialog;
@@ -12,7 +13,7 @@ class SignDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit SignDialog(QWidget *parent = nullptr);
+    explicit SignDialog(Client *clnt, QWidget *parent = nullptr);
     ~SignDialog();
 
 private slots:
@@ -22,6 +23,7 @@ private slots:
 
 private:
     Ui::SignDialog *ui;
+    Client *client;
 };
 
 #endif // SIGNDIALOG_H

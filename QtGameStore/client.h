@@ -81,6 +81,7 @@ public:
     QByteArray downBlock;   //下载缓冲区
 
     QString receiveType;   //接收信号类型
+    QString curUsr;     //目前用户名
 
 
 
