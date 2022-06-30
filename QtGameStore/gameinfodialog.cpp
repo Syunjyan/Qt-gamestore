@@ -37,7 +37,7 @@ void gameInfoDialog::on_confirmDownloadBtn_clicked()
     QString id = client->curUsr;
     QString searchFileName = filename;    //获取要查找的文件名
 
-    qDebug() << endl<<filename<<endl;
+    qDebug() << Qt::endl<<filename<<Qt::endl;
 
     client->sendMessToServer(client->SEARCH, id, searchFileName);       //给服务器发送查找请求
     // 这⾥发送请求

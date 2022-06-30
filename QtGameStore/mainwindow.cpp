@@ -382,7 +382,7 @@ void MainWindow::on_choose_file_download_clicked()
 //        db.open();
         qDebug()<<"path is not exist spc";
     }
-    qDebug() << game_na << game_in<<filename << endl;
+    qDebug() << game_na << game_in<<filename << Qt::endl;
     db_s.setDatabaseName(client->curUsr + ".db");
     if(!db_s.open())qDebug()<<"open failed";
     QSqlQuery query_s(db_s);

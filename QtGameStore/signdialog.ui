@@ -54,7 +54,7 @@ border-radius: 8px;
         <enum>QLineEdit::Password</enum>
        </property>
        <property name="placeholderText">
-        <string>Confirm your pasword</string>
+        <string>Confirm your password</string>
        </property>
       </widget>
      </item>

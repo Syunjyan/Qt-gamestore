@@ -248,7 +248,7 @@ QPushButton#uploadBtn:disabled {
        <number>1</number>
       </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="user">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -375,8 +375,47 @@ QPushButton#settingBtn:disabled {
                <height>50</height>
               </size>
              </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#logoutBtn {
+    border-radius: 12px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#logoutBtn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#logoutBtn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#logoutBtn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+             </property>
              <property name="text">
               <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myicon.qrc">
+               <normaloff>:/myimages/images/exitLoad.png</normaloff>:/myimages/images/exitLoad.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
              </property>
             </widget>
            </item>
@@ -404,7 +443,7 @@ QPushButton#settingBtn:disabled {
            </font>
           </property>
           <property name="styleSheet">
-           <string notr="true">QTextEdit#showInformationTextEdit{
+           <string notr="true">QTextBrowser#showInformationTextBrowser{
 color: rgb(147, 147, 147);
                             	padding-left:6px;
 
@@ -557,6 +596,16 @@ QPushButton#onSaleBtn:disabled {
           <pointsize>20</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView#tableView{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+        </property>
        </widget>
        <widget class="QLabel" name="label">
         <property name="geometry">
@@ -589,7 +638,18 @@ QPushButton#onSaleBtn:disabled {
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="gamenum"/>
+          <widget class="QLineEdit" name="gamenum">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#gamenum{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="kuan">
@@ -600,6 +660,35 @@ QPushButton#onSaleBtn:disabled {
          </item>
          <item>
           <widget class="QPushButton" name="choose_file_download">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#choose_file_download {
+    border-radius: 4px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#choose_file_download:hover {
+    border-radius: 4px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#choose_file_download:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+ 
+QPushButton#choose_file_download:disabled {
+    border: 0px;
+    border-radius: 4px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+           </property>
            <property name="text">
             <string>选择</string>
            </property>
@@ -612,12 +701,41 @@ QPushButton#onSaleBtn:disabled {
          <rect>
           <x>420</x>
           <y>150</y>
-          <width>21</width>
+          <width>91</width>
           <height>21</height>
          </rect>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton {
+    border-radius: 8px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#pushButton:hover {
+    border-radius: 8px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#pushButton:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+ 
+QPushButton#pushButton:disabled {
+    border: 0px;
+    border-radius: 8px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+        </property>
         <property name="text">
-         <string>PushButton</string>
+         <string>刷新</string>
         </property>
        </widget>
       </widget>
@@ -713,6 +831,16 @@ QPushButton#playBtn:disabled {
           <pointsize>20</pointsize>
          </font>
         </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView#usr_tableView{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+        </property>
        </widget>
        <widget class="QWidget" name="horizontalLayoutWidget_2">
         <property name="geometry">
@@ -732,7 +860,18 @@ QPushButton#playBtn:disabled {
           </widget>
          </item>
          <item>
-          <widget class="QLineEdit" name="gamenum_2"/>
+          <widget class="QLineEdit" name="gamenum_2">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#gamenum_2{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+           </property>
+          </widget>
          </item>
          <item>
           <widget class="QLabel" name="kuan_2">
@@ -743,6 +882,35 @@ QPushButton#playBtn:disabled {
          </item>
          <item>
           <widget class="QPushButton" name="choose_game_toplay_Btn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#choose_game_toplay_Btn {
+    border-radius: 4px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#choose_game_toplay_Btn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#choose_game_toplay_Btn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#choose_game_toplay_Btn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+           </property>
            <property name="text">
             <string>选择</string>
            </property>
@@ -1085,7 +1253,7 @@ border-radius: 8px;
      <x>0</x>
      <y>0</y>
      <width>800</width>
-     <height>26</height>
+     <height>22</height>
     </rect>
    </property>
   </widget>
