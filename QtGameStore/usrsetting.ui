@@ -229,7 +229,7 @@ QPushButton#uploadIconBtn:disabled {
 }</string>
         </property>
         <property name="text">
-         <string>Uplaod</string>
+         <string>Upload</string>
         </property>
        </widget>
       </item>
