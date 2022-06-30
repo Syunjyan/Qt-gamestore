@@ -1,10 +1,19 @@
 #include "signdialog.h"
 #include "ui_signdialog.h"
 #include "client.h"
+#include "mainwindow.h"
 
 #include <QString>
 #include <QMessageBox>
 #include <QTimer>
+
+#include <QSqlDatabase>
+#include <QSqlQuery>
+
+#include <QSqlQueryModel>
+#include <QSqlTableModel>
+#include <QSqlRelationalTableModel>
+#include <QTableView>
 
 SignDialog::SignDialog(Client *clnt, QWidget *parent) :
     QDialog(parent),
@@ -88,6 +97,8 @@ void SignDialog::on_loginBtn_clicked()
         QMessageBox::warning(this,"","注册成功",QMessageBox::Yes);
         client->curUsr = username;
         accept();
+
+
     }
     else if(client->receiveType == client->REGIIDEXIT){
         QMessageBox::warning(this,"","该用户名已被使用",QMessageBox::Yes);

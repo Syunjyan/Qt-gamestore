@@ -32,7 +32,9 @@ usrSetting::~usrSetting()
 
 void usrSetting::on_chooseIconBtn_clicked()
 {
-    filename = QFileDialog::getOpenFileName(this,tr("select your icon"));
+    filename = QFileDialog::getOpenFileName(this,
+                                                    tr("select your icon"));
+
     if (filename.isEmpty()) {
 //        QMessageBox msg(QMessageBox::Warning,"警告","图片打开失败，请打开正确格式图片",QMessageBox::Yes,NULL);
 //        msg.exec();

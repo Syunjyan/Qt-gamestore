@@ -1,5 +1,6 @@
 QT       += core gui
 QT       += network
+QT       += sql
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -11,6 +12,7 @@ CONFIG += c++17
 
 SOURCES += \
     client.cpp \
+    gameinfodialog.cpp \
     logindialog.cpp \
     main.cpp \
     mainwindow.cpp \
@@ -19,12 +21,14 @@ SOURCES += \
 
 HEADERS += \
     client.h \
+    gameinfodialog.h \
     logindialog.h \
     mainwindow.h \
     signdialog.h \
     usrsetting.h
 
 FORMS += \
+    gameinfodialog.ui \
     logindialog.ui \
     mainwindow.ui \
     signdialog.ui \
@@ -34,6 +38,8 @@ FORMS += \
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
+
+RC_ICONS = logo2.ico
 
 RESOURCES += \
     myicon.qrc
