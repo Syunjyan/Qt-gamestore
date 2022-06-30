@@ -248,7 +248,7 @@ QPushButton#uploadBtn:disabled {
        <number>1</number>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="user">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -606,6 +606,19 @@ QPushButton#onSaleBtn:disabled {
           </widget>
          </item>
         </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>150</y>
+          <width>21</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>PushButton</string>
+        </property>
        </widget>
       </widget>
       <widget class="QWidget" name="library">

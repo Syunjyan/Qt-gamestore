@@ -318,6 +318,13 @@ void MainWindow::on_confirmBtn_clicked()
     QMessageBox dlg(QMessageBox::NoIcon,"","上传完成");
     dlg.exec();
 
+
+    ui->filePathLineEdit->clear();
+    ui->introductionTextEdit->clear();
+    ui->nameLineEdit->clear();
+
+
+
 }
 
 void MainWindow::on_choose_file_download_clicked()
@@ -476,4 +483,38 @@ void MainWindow::on_logoutBtn_clicked()
     if(QMessageBox::question(this,"提示","确认退出？",QMessageBox::Yes,QMessageBox::No)==QMessageBox::Yes){
         exit(0);
     }
+}
+
+void MainWindow::on_pushButton_clicked()
+{
+//    QSqlDatabase db_1;// = QSqlDatabase::database();
+
+//    QString dbPath_1 = client->curUsr + "main";
+//    if(QSqlDatabase::contains(dbPath_1)){
+//        db_1=QSqlDatabase::database(dbPath_1);
+//    }else{
+//        db_1 = QSqlDatabase::addDatabase("QSQLITE",dbPath_1);
+
+//    }
+
+
+//    db_1.setDatabaseName("./game.db");
+//    db_1.open();
+//    model = new QSqlTableModel(this,db_1);
+
+//    model->setTable("game");
+
+//    model->select();
+//    model->setEditStrategy(QSqlTableModel::OnManualSubmit);
+//    ui->tableView->setModel(model);
+
+
+    model->setTable("game");  // table_name 是你自己数据库对应你要刷新的表名
+    model->select();
+    ui->tableView->setColumnHidden(1,true);//设置某一列不显示
+    ui->tableView->setColumnHidden(2,true);
+    ui->tableView->resizeColumnsToContents();//自动调整列宽
+    ui->tableView->resizeRowsToContents();//自动调整行距
+    ui->tableView->setAlternatingRowColors(true);//设置行间交叉颜色
+    ui->tableView->setColumnWidth(0,300);
 }

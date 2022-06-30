@@ -49,6 +49,8 @@ private slots:
 
     void on_logoutBtn_clicked();
 
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     Client *client;
