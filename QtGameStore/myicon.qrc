@@ -10,5 +10,6 @@
         <file>images/sale.png</file>
         <file>images/happy.png</file>
         <file>images/controllor.png</file>
+        <file>images/exitLoad.png</file>
     </qresource>
 </RCC>

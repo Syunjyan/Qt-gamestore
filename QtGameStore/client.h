@@ -59,6 +59,7 @@ public:
 //    void actView();                 //操作界面
 //    void closeEvent(QCloseEvent *event);    //点击x按钮
     void openFile();                //打开要上传的文件
+    void init_usrgamedb();
     //网络文件变量
     QTcpSocket *tcpClient;
     qint64 messageSize;     //接收到的信息大小

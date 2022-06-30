@@ -1,10 +1,19 @@
 #include "signdialog.h"
 #include "ui_signdialog.h"
 #include "client.h"
+#include "mainwindow.h"
 
 #include <QString>
 #include <QMessageBox>
 #include <QTimer>
+
+#include <QSqlDatabase>
+#include <QSqlQuery>
+
+#include <QSqlQueryModel>
+#include <QSqlTableModel>
+#include <QSqlRelationalTableModel>
+#include <QTableView>
 
 SignDialog::SignDialog(Client *clnt, QWidget *parent) :
     QDialog(parent),
@@ -30,8 +39,7 @@ void SignDialog::on_loginBtn_clicked()
     QString password_2 = ui->pwdLineEdit_2->text();
     if(username.isEmpty() || password.isEmpty() || password_2.isEmpty())
     {
-        QMessageBox msg(QMessageBox::Warning,"警告","用户名或密码不能为空",QMessageBox::Yes);
-        msg.exec();
+        QMessageBox::warning(this,"警告","用户名或密码不能为空",QMessageBox::Yes);
         ui->usrLineEdit->clear();
         ui->pwdLineEdit->clear();
         ui->pwdLineEdit_2->clear();
@@ -39,8 +47,7 @@ void SignDialog::on_loginBtn_clicked()
         return;
     }
     else if(password!=password_2){
-        QMessageBox msg(QMessageBox::Warning,"警告","两次输入的密码不同",QMessageBox::Yes);
-               msg.exec();
+        QMessageBox::warning(this,"警告","两次输入的密码不同",QMessageBox::Yes);
         ui->pwdLineEdit->clear();
         ui->pwdLineEdit_2->clear();
         ui->pwdLineEdit->setFocus();
@@ -90,6 +97,8 @@ void SignDialog::on_loginBtn_clicked()
         QMessageBox::warning(this,"","注册成功",QMessageBox::Yes);
         client->curUsr = username;
         accept();
+
+
     }
     else if(client->receiveType == client->REGIIDEXIT){
         QMessageBox::warning(this,"","该用户名已被使用",QMessageBox::Yes);

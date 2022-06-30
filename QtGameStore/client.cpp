@@ -6,6 +6,9 @@
 #include <QtNetwork>
 #include <QFileDialog>
 #include <QFile>
+#include <QSqlDatabase>
+#include <QSqlQuery>
+
 
 Client::Client(QWidget *parent) :
     QWidget(parent)
@@ -176,7 +179,7 @@ void Client::readMessage()
                 //接收文件名，并建立文件
                 in >> downFileName;
 //                ui->downLabel->setText(tr("下载文件 %1").arg(downFileName));
-                downFileName = "./files/" + downFileName;   //将下载文件装入files文件夹中
+                downFileName = "./files/" + curUsr + "/" + downFileName;   //将下载文件装入files文件夹中
                 qDebug() << downFileName;
                 downBytesReceived += downFileNameSize;
                 downLocalFile = new QFile(downFileName);
@@ -216,7 +219,7 @@ void Client::readMessage()
             isDownloadingFile = false;  //状态设置为不接收文件
         }
     }
-    qDebug()<<"emit endreading";
+//    qDebug()<<"emit endreading";
     emit endReading();
 }
 
@@ -395,20 +398,10 @@ void Client::disPlayError(QAbstractSocket::SocketError)
 
 
 /*打开要上传的文件*/
-//void Client::openFile()
-//{
-//    upFileName = QFileDialog::getOpenFileName(this);
-//    if(!upFileName.isEmpty()){
-//        ui->upButton->setEnabled(true);     //上传按钮生效
-//        int realNameIndex = upFileName.lastIndexOf("/");
-//        QString realName = upFileName.right(upFileName.length ()-realNameIndex-1);  //取真正文件名
-//        ui->filenameLabel->setText(tr("文件名： %1").arg(realName));
-//        qDebug() << upFileName;
-//    }
-//}
+
 
 ///*开始上传按钮*/
-//void Client::on_upButton_clicked()
+//void Client::on_confirmBtn_clicked()
 //{
 //    //给服务器发送上传请求
 //    QString id = ui->idLineEdit->text();
@@ -426,6 +419,8 @@ void Client::disPlayError(QAbstractSocket::SocketError)
 ///
 void Client::startUpload()
 {
+    QSqlDatabase db;
+
     fileToUpdate = new QFile(upFileName);
     if(!fileToUpdate->open(QFile::ReadOnly)){
         qDebug() <<"client: open file error!";
@@ -481,8 +476,8 @@ void Client::updateUploadProgress(qint64 numBytes)
 //            ui->filenameLabel->setText(tr("传送文件 %1 成功").arg(realName));
             fileToUpdate->close();
             isUploadingFile = false;    //退出文件传输状态
-//            ui->openButton->setEnabled(true);   //文件传输完成后打开文件按钮有效
-//            ui->exitButton->setEnabled(true);   //退出登录按钮有效
+            //ui->chooseBtn->setEnabled(true);   //文件传输完成后打开文件按钮有效
+//            ui->->setEnabled(true);   //退出登录按钮有效
 //            ui->searchButton->setEnabled(true); //查找按钮有效
         }
     }
@@ -526,3 +521,4 @@ void Client::updateUploadProgress(qint64 numBytes)
 //    ui->searchButton->setEnabled(true);
 //    ui->searchEdit->setText(tr(""));
 //}
+

@@ -248,7 +248,7 @@ QPushButton#uploadBtn:disabled {
        <number>1</number>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="user">
        <layout class="QGridLayout" name="gridLayout_3">
@@ -368,6 +368,58 @@ QPushButton#settingBtn:disabled {
             </widget>
            </item>
            <item>
+            <widget class="QPushButton" name="logoutBtn">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>50</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton#logoutBtn {
+    border-radius: 12px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#logoutBtn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#logoutBtn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#logoutBtn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="icon">
+              <iconset resource="myicon.qrc">
+               <normaloff>:/myimages/images/exitLoad.png</normaloff>:/myimages/images/exitLoad.png</iconset>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>40</width>
+               <height>40</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
             <spacer name="verticalSpacer_4">
              <property name="orientation">
               <enum>Qt::Vertical</enum>
@@ -385,6 +437,11 @@ QPushButton#settingBtn:disabled {
         </item>
         <item row="5" column="0">
          <widget class="QTextBrowser" name="showInformationTextBrowser">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
           <property name="styleSheet">
            <string notr="true">QTextBrowser#showInformationTextBrowser{
 color: rgb(147, 147, 147);
@@ -394,6 +451,9 @@ color: rgb(147, 147, 147);
 border-radius: 8px;
     background-color: #ffffff;
 };</string>
+          </property>
+          <property name="placeholderText">
+           <string>这里什么都没有哦</string>
           </property>
          </widget>
         </item>
@@ -522,6 +582,162 @@ QPushButton#onSaleBtn:disabled {
          </item>
         </layout>
        </widget>
+       <widget class="QTableView" name="tableView">
+        <property name="geometry">
+         <rect>
+          <x>45</x>
+          <y>151</y>
+          <width>371</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView#tableView{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="label">
+        <property name="geometry">
+         <rect>
+          <x>480</x>
+          <y>340</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>请选择你想下载第几款游戏</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget">
+        <property name="geometry">
+         <rect>
+          <x>470</x>
+          <y>370</y>
+          <width>192</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="di">
+           <property name="text">
+            <string>第</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="gamenum">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#gamenum{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="kuan">
+           <property name="text">
+            <string>款</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="choose_file_download">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#choose_file_download {
+    border-radius: 4px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#choose_file_download:hover {
+    border-radius: 4px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#choose_file_download:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 4px;
+}
+ 
+QPushButton#choose_file_download:disabled {
+    border: 0px;
+    border-radius: 4px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+           </property>
+           <property name="text">
+            <string>选择</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QPushButton" name="pushButton">
+        <property name="geometry">
+         <rect>
+          <x>420</x>
+          <y>150</y>
+          <width>91</width>
+          <height>21</height>
+         </rect>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton#pushButton {
+    border-radius: 8px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#pushButton:hover {
+    border-radius: 8px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#pushButton:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+ 
+QPushButton#pushButton:disabled {
+    border: 0px;
+    border-radius: 8px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+        </property>
+        <property name="text">
+         <string>刷新</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="library">
        <widget class="QWidget" name="widget_4" native="true">
@@ -601,13 +817,159 @@ QPushButton#playBtn:disabled {
          </item>
         </layout>
        </widget>
+       <widget class="QTableView" name="usr_tableView">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>150</y>
+          <width>371</width>
+          <height>301</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>20</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTableView#usr_tableView{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+        </property>
+       </widget>
+       <widget class="QWidget" name="horizontalLayoutWidget_2">
+        <property name="geometry">
+         <rect>
+          <x>450</x>
+          <y>350</y>
+          <width>192</width>
+          <height>80</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QLabel" name="di_2">
+           <property name="text">
+            <string>第</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="gamenum_2">
+           <property name="styleSheet">
+            <string notr="true">QLineEdit#gamenum_2{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="kuan_2">
+           <property name="text">
+            <string>款</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="choose_game_toplay_Btn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#choose_game_toplay_Btn {
+    border-radius: 4px;
+    border:2px solid rgb(20,196,188);
+background-color: rgb(20,196,188);
+    color:  rgb(255, 255, 255);
+}
+ 
+QPushButton#choose_game_toplay_Btn:hover {
+    border-radius: 12px;
+    color: rgb(20,196,188);
+    background-color: rgb(255,255,255);
+  border:2px solid rgb(20,196,188);
+    border-color: rgb(20,196,188);
+}
+ 
+QPushButton#choose_game_toplay_Btn:pressed {
+    border: 0px;
+    background-color: #ffffff;
+    border-radius: 12px;
+}
+ 
+QPushButton#choose_game_toplay_Btn:disabled {
+    border: 0px;
+    border-radius: 12px;
+    border: 1px solid #46bcff;
+    opacity: 0.4;
+}</string>
+           </property>
+           <property name="text">
+            <string>选择</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QLabel" name="label_2">
+        <property name="geometry">
+         <rect>
+          <x>460</x>
+          <y>310</y>
+          <width>171</width>
+          <height>31</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>请选择你想玩第几款游戏</string>
+        </property>
+       </widget>
       </widget>
       <widget class="QWidget" name="upload">
        <layout class="QGridLayout" name="gridLayout_2">
-        <item row="4" column="3">
-         <widget class="QTextEdit" name="introductionTextEdit">
+        <item row="2" column="3">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="2">
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="3">
+         <widget class="QLineEdit" name="nameLineEdit">
           <property name="styleSheet">
-           <string notr="true">QTextEdit#introductionTextEdit{
+           <string notr="true">QLineEdit#nameLineEdit{
 color: rgb(147, 147, 147);
                             	padding-left:6px;
 
@@ -617,6 +979,117 @@ border-radius: 8px;
 };</string>
           </property>
          </widget>
+        </item>
+        <item row="7" column="3">
+         <widget class="QLineEdit" name="filePathLineEdit">
+          <property name="styleSheet">
+           <string notr="true">QLineEdit#filePathLineEdit{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <widget class="QLabel" name="label_4">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QLabel#label_4{
+color: rgb(255, 255, 255);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: rgb(20,196,188);
+};</string>
+          </property>
+          <property name="text">
+           <string>Introduction
+ to your game
+ (optional)</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="wordWrap">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="4">
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="1" column="0">
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="5" column="3">
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="8" column="3">
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Minimum</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
         </item>
         <item row="1" column="1">
          <widget class="QLabel" name="label_3">
@@ -684,20 +1157,6 @@ QPushButton#chooseBtn:disabled {
           </property>
          </widget>
         </item>
-        <item row="7" column="3">
-         <widget class="QLineEdit" name="filePathLineEdit">
-          <property name="styleSheet">
-           <string notr="true">QLineEdit#filePathLineEdit{
-color: rgb(147, 147, 147);
-                            	padding-left:6px;
-
-    border: 1px solid rgb(20,196,188);
-border-radius: 8px;
-    background-color: #ffffff;
-};</string>
-          </property>
-         </widget>
-        </item>
         <item row="0" column="3">
          <spacer name="verticalSpacer_2">
           <property name="orientation">
@@ -710,162 +1169,6 @@ border-radius: 8px;
            <size>
             <width>20</width>
             <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="3">
-         <widget class="QLineEdit" name="nameLineEdit">
-          <property name="styleSheet">
-           <string notr="true">QLineEdit#nameLineEdit{
-color: rgb(147, 147, 147);
-                            	padding-left:6px;
-
-    border: 1px solid rgb(20,196,188);
-border-radius: 8px;
-    background-color: #ffffff;
-};</string>
-          </property>
-         </widget>
-        </item>
-        <item row="8" column="3">
-         <spacer name="verticalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="2" column="3">
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="4" column="1">
-         <widget class="QLabel" name="label_4">
-          <property name="font">
-           <font>
-            <pointsize>8</pointsize>
-           </font>
-          </property>
-          <property name="styleSheet">
-           <string notr="true">QLabel#label_4{
-color: rgb(255, 255, 255);
-                            	padding-left:6px;
-
-    border: 1px solid rgb(20,196,188);
-border-radius: 8px;
-    background-color: rgb(20,196,188);
-};</string>
-          </property>
-          <property name="text">
-           <string>Introduction
- to your game
- (optional)</string>
-          </property>
-          <property name="textFormat">
-           <enum>Qt::AutoText</enum>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item row="11" column="3">
-         <spacer name="verticalSpacer_7">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="2">
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="5" column="3">
-         <spacer name="verticalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="4">
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item row="1" column="0">
-         <spacer name="horizontalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Minimum</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
            </size>
           </property>
          </spacer>
@@ -908,6 +1211,33 @@ QPushButton#confirmBtn:disabled {
           </property>
           <property name="text">
            <string>Confirm upload</string>
+          </property>
+         </widget>
+        </item>
+        <item row="11" column="3">
+         <spacer name="verticalSpacer_7">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="4" column="3">
+         <widget class="QTextEdit" name="introductionTextEdit">
+          <property name="styleSheet">
+           <string notr="true">QTextEdit#introductionTextEdit{
+color: rgb(147, 147, 147);
+                            	padding-left:6px;
+
+    border: 1px solid rgb(20,196,188);
+border-radius: 8px;
+    background-color: #ffffff;
+};</string>
           </property>
          </widget>
         </item>
