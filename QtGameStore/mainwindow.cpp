@@ -470,7 +470,7 @@ void MainWindow::on_onSaleBtn_clicked()
 
 void MainWindow::on_zhenghuoBtn_clicked()
 {
-    QDesktopServices::openUrl(QUrl("https://web.pkuhollow.com/"));
+    QDesktopServices::openUrl(QUrl("https://pkuhelper.pku.edu.cn/hole/"));
 }
 
 void MainWindow::on_playBtn_clicked()
