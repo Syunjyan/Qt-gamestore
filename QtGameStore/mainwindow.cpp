@@ -236,7 +236,8 @@ void addGame(QString gamename,QString gameinfo,QString Filename)
     query.addBindValue(gamename);
     query.addBindValue(gameinfo);
     query.addBindValue(Filename);
-//    qDebug()<<"check query.exec() ="<<query.exec();
+//    qDebug()<<"check query.exec() ="<<
+    query.exec();
 
 //    db.setDatabaseName("./game.db");
 //    db.open();
